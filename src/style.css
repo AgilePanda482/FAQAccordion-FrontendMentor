@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --White-color: hsl(0, 0%, 100%);
+    --Light-pink: #F9EEFF;
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Light-pink);
+    background-image: url(./assets/images/background-pattern-mobile.svg);
+    background-position: top;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    min-height: 95vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    padding: 1.70rem;
+    max-width: 42vh;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 1rem;
+    background-color: var(--White-color);
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    gap: 1rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+header h1 {
+    font-size: 3rem;
+}
+
+header img {
+    height: 2rem;
+}
+
+.item {
+    border-bottom: 0.1rem solid var(--Light-pink);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 5.50rem;
+}
+
+.question h2 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    line-height: 1.16rem;
+}
+
+.question img {
+    height: 2.5rem;
+}
+
+.question h2:hover, img:hover{
+    color: #AD28EB;
+    cursor: pointer;
+}
+
+.answer {
+    height: 0;
+    font-size: 0;
+    overflow: hidden;
+    transition: font-size 1s ease-out;
+}
+
+.answer p {
+    color: var(--Grayish-purple);
+    padding-bottom: 1.5rem;
+    line-height: 1.44rem;
+}
+
+.answer.visible {
+    height: auto;
+    font-size: 0.95rem;
+}
+
+footer {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: #AD28EB;
+    cursor: pointer;
+}
+
+@media (min-width: 500px) {
+    body {
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+    }
+
+    main {
+        min-height: 90vh;
+        min-width: 270px;
+    }
+
+    .container {
+        padding: 2rem;
+        max-width: 95vh;
+    }
+
+    header {
+        font-size: 2.5rem;
+    }
+
+    .item{
+        max-width: 32rem;
+    }
+
+    .question {
+        height: 4.25rem;
+        
+    }
+
+    .question h2{
+        font-size: 1.08rem;
+    }
+
+    .question img {
+        height: auto;
+    }
+
+}
