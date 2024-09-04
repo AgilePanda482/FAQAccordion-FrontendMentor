@@ -44,6 +44,11 @@ main {
     background-color: var(--White-color);
 }
 
+header::before {
+    content: url(/src/assets/images/icon-star.svg);
+    height: 2rem;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -58,10 +63,6 @@ header h1 {
     font-size: 3rem;
 }
 
-header img {
-    height: 2rem;
-}
-
 .item {
     border-bottom: 0.1rem solid var(--Light-pink);
 }
@@ -74,18 +75,25 @@ header img {
     height: 5.50rem;
 }
 
+.question::after {
+    content: url(assets/images/icon-plus.svg);
+    cursor: pointer;
+}
+
 .question h2 {
     font-weight: 600;
     font-size: 1.2rem;
     line-height: 1.16rem;
 }
 
-.question img {
-    height: 2.5rem;
+.question h2:hover{
+    color: #AD28EB;
+    cursor: pointer;
 }
 
-.question h2:hover, img:hover{
-    color: #AD28EB;
+.question.minus::after {
+    height: 2.5rem;
+    content: url(assets/images/icon-minus.svg);
     cursor: pointer;
 }
 
@@ -161,8 +169,7 @@ footer a:hover {
         font-size: 1.08rem;
     }
 
-    .question img {
+    .question.active::after{
         height: auto;
     }
-
 }
